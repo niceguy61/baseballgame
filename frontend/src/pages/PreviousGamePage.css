@@ -1,0 +1,61 @@
+/* frontend/src/pages/PreviousGamePage.css */
+
+.previous-game-page {
+    text-align: center;
+    padding: 20px;
+  }
+  
+  .scoreboard {
+    margin: 20px auto;
+    width: 80%;
+    border-collapse: collapse;
+  }
+  
+  .scoreboard th, .scoreboard td {
+    border: 1px solid #000;
+    padding: 5px;
+    text-align: center;
+  }
+  
+  .player-stats-table {
+    text-align: left;
+    margin: auto;
+    width: 80%;
+    margin-top: 20px;
+  }
+  
+  .player-stats-table h3 {
+    margin-bottom: 10px;
+  }
+  
+  .player-stats-table table {
+    width: 100%;
+    border-collapse: collapse;
+  }
+  
+  .player-stats-table th, .player-stats-table td {
+    border: 1px solid #000;
+    padding: 5px;
+    text-align: center;
+  }
+  
+  .event-logs {
+    text-align: left;
+    margin: auto;
+    width: 80%;
+    margin-top: 20px;
+  }
+  
+  .event-logs h3 {
+    margin-bottom: 10px;
+  }
+  
+  .event-logs ul {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .event-logs li {
+    margin: 5px 0;
+  }
+  

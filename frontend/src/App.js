@@ -5,6 +5,7 @@ import SignupPage from './pages/SignupPage';
 import GamePage from './pages/GamePage';
 import AdminPage from './pages/AdminPage';
 import StatsPage from './pages/StatsPage';
+import PreviousGamePage from './pages/PreviousGamePage';
 
 const App = () => {
   return (
@@ -14,6 +15,7 @@ const App = () => {
       <Route path="/game" component={GamePage} />
       <Route path="/admin" component={AdminPage} />
       <Route path="/stats" component={StatsPage} />
+      <Route path="/previous-game" component={PreviousGamePage} />
       <Redirect from="/" to="/login" />
     </Switch>
   );

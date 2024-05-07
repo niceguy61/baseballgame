@@ -10,7 +10,10 @@ const LoginPage = () => {
 
   const handleLogin = async () => {
     try {
-      const response = await axiosInstance.post('/api/auth/login', { username, password });
+      const response = await axiosInstance.post('/api/auth/login', {
+        username,
+        password
+      });
       const { token } = response.data;
       localStorage.setItem('token', token);
 
@@ -25,6 +28,7 @@ const LoginPage = () => {
       }
     } catch (error) {
       console.error('Login failed', error);
+      alert('Login failed');
     }
   };
 

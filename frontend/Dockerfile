@@ -15,7 +15,7 @@ COPY . .
 EXPOSE 3000
 
 # Set environment variables
-ENV REACT_APP_API_URL=http://backend:5000
+ENV REACT_APP_API_URL=http://localhost:5000
 
 # Start the React development server
 CMD ["npm", "start"]
