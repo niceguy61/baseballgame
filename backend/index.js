@@ -25,6 +25,7 @@ mongoose.connect(mongoURL, { useNewUrlParser: true, useUnifiedTopology: true });
 app.use(bodyParser.json());
 app.use(morgan('dev'));
 
+
 app.use(passport.initialize());
 app.use('/api/auth', require('./routes/auth'));
 app.use('/api/games', require('./routes/games')(io));
