@@ -7,6 +7,14 @@
 docker-compose up -d --build
 ```
 
+# 사용스킬
+1. React
+2. Node.js
+3. MongoDB
+4. Redis (예정)
+5. AWS SQS or AWS SNS (예정)
+
+
 # Overview
 1. [backend] 야구팀을 만들어봅시다. (/api/team/create)
 2. [backend] 게임이 자동으로 플레이가 됩니다.
