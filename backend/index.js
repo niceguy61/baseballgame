@@ -9,6 +9,10 @@ const socketIo = require('socket.io');
 const { checkAndCreateGame } = require('./gameScheduler');
 const { generateEvent } = require('./utils/gameEventGenerator');
 require('./config/passport');
+const { initializeDefaultGachaSet } = require('./controllers/gachaController');
+const userRoutes = require('./routes/userRoutes');
+const gachaRoutes = require('./routes/gachaRoutes');
+const inventoryRoutes = require('./routes/inventoryRoutes');
 
 // MongoDB 설정
 const mongoURL = process.env.MONGO_URL || 'mongodb://localhost/baseball-game';
@@ -49,9 +53,15 @@ app.use('/api/games', gamesRouter);
 app.use('/api/stats', require('./routes/stats'));
 app.use('/api/teams', require('./routes/teams'));
 app.use('/api/players', require('./routes/players'));
+app.use('/api/users', userRoutes);
+app.use('/api/gacha', gachaRoutes);
+app.use('/api/inventory', inventoryRoutes);
 
 const port = process.env.PORT || 5000;
-server.listen(port, () => console.log(`Backend server running on port ${port}`));
+server.listen(port, async () => {
+  console.log(`Backend server running on port ${port}`);
+  await initializeDefaultGachaSet();
+});
 
 // 주기적으로 게임 확인 및 이벤트 생성
 setInterval(checkAndCreateGame, 10000); // 1분 간격으로 게임 생성 여부 확인

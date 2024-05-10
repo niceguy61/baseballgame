@@ -5,6 +5,8 @@ const UserSchema = new mongoose.Schema({
   username: { type: String, unique: true, required: true },
   hash: String,
   salt: String,
+  gold: { type: Number, default: 0 },
+  gachaLogs: [{ gachaId: String, item: Object }],
   isAdmin: { type: Boolean, default: false }
 });
 
